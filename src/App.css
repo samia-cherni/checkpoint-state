@@ -23,6 +23,9 @@
     width: 18rem;
     margin: 2% 0px;
 }
+.list-group{
+    width:18rem;
+}
 .bg-mycolor{
     background-image: linear-gradient(to right, #d36be7, #ec67cd, #fa6ab5, #ff729f, #ff7e8e, #ff8a82, #ff9879, #ffa773, #ffb96d, #ffcd6a, #ffe26a, #f9f871);
 }

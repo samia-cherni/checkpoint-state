@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Profile = ({ imgSrc, fullName, bio, profession, seconds }) => {
+const Profile = ({ imgSrc, fullName, bio, profession}) => {
     return (
     <div>
         <div className="card justify-content-center" style={{ width: "18rem" }}>
@@ -11,11 +11,6 @@ const Profile = ({ imgSrc, fullName, bio, profession, seconds }) => {
             <p className="card-text">{bio}</p>
             <small className="text-muted">{profession}</small>
         </div>
-        <ul className="list-group list-group-flush">
-            <li className="list-group-item">
-            Seconds elapsed since mount :{seconds}
-            </li>
-        </ul>
         </div>
     </div>
     );

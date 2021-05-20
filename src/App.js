@@ -13,12 +13,12 @@ export default class App extends Component {
         imgSrc: "/jane.jpg",
         profession: "Project Manager",
       },
-      shows: false,
-      seconds: 1,
+      show: false,
+      seconds: 0,
     };
   }
   toggleShow = () => {
-    this.setState({ shows: !this.state.shows });
+    this.setState({ show: !this.state.show });
   };
 
   componentDidMount() {
@@ -41,13 +41,19 @@ export default class App extends Component {
             <button className="btn btn-outline-primary" onClick={this.toggleShow}>
               Show Profile
             </button>
-            {this.state.shows && (<Profile imgSrc={this.state.Person.imgSrc}
+            {this.state.show && (<Profile imgSrc={this.state.Person.imgSrc}
                                             fullName={this.state.Person.fullName}
                                             bio={this.state.Person.bio}
                                             profession={this.state.Person.profession}
-                                            seconds={this.state.seconds}/>)}
+                                            />)}
           </div>
-          <div className="col-md-3 ml-md-auto"></div>
+          <div className="col-md-3 ml-md-auto">
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+            Seconds elapsed since mount :{this.state.seconds}
+            </li>
+        </ul>
+          </div>
         </div>
       </div>
       <footer>&copy; 2021</footer>
